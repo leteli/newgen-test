@@ -1,0 +1,20 @@
+{
+  "name": "newgen-test",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "lint": "npx eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "jest": "^28.1.1"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^26.5.3"
+  }
+}
