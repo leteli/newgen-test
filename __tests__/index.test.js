@@ -1,5 +1,3 @@
-import { test, expect } from 'jest';
-
 import getRequiredCourses from '../src/index.js';
 import { courses, result1, result2, result3, requiredRange1, requiredRange2, requiredRange3 } from '../__fixtures__/fixtures.js';
 
