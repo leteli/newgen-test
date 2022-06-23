@@ -6,19 +6,33 @@ const getRequiredCourses = (courses, priceRange) => courses
       if (priceMin === null && priceMax === null) {
         return false;
       }
-      if (rangeMax === null && priceMax === null) {
-        return rangeMin <= priceMin;
+      if (priceMin === null) {
+        if (rangeMin === null) {
+          return rangeMax >= priceMax;
+        }
+        if (rangeMax === null) {
+          return rangeMin <= priceMax;
+        }
+        return rangeMin <= priceMax && rangeMax >= priceMax;
+      }
+
+      if (priceMax === null) {
+        if (rangeMin === null) {
+          rangeMax >= priceMin;
+        }
+        if (rangeMax === null) {
+          return rangeMin <= priceMin;
+        }
+        return rangeMin <= priceMin && rangeMax >= priceMin;
+      }
+
+      if (rangeMin === null) {
+        return rangeMax >= priceMin;
       }
       if (rangeMax === null) {
-        return priceMax >= rangeMin;
+        return rangeMin <= priceMax;
       }
-      if (priceMin === null && rangeMin === null) { // избегаем неявного приведения типов
-        return priceMax <= rangeMax;
-      }
-      if (priceMin === null) {
-        return rangeMin <= priceMax && priceMax <= rangeMax;
-      }
-      return priceMin <= rangeMax;
+      return rangeMax >= priceMin && rangeMin <= priceMax;
   });
 
 export default getRequiredCourses;
