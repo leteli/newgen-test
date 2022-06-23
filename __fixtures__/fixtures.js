@@ -1,4 +1,6 @@
+// ВНИМАНИЕ: courses из условия дополнен новым элементом
 export const courses = [
+    { name: "Courses in Wonderland", prices: [0, 50] },
     { name: "Courses in England", prices: [0, 100] }, 
     { name: "Courses in Germany", prices: [500, null] }, 
     { name: "Courses in Italy", prices: [100, 200] }, 
@@ -10,6 +12,7 @@ export const courses = [
 ];
 
 export const result1 = [
+    { name: "Courses in Wonderland", prices: [0, 50]},
     { name: "Courses in England", prices: [0, 100] }, 
     { name: "Courses in Italy", prices: [100, 200] }, 
     { name: "Courses in China", prices: [50, 250] },
@@ -38,6 +41,7 @@ export const requiredRange3 = [200, null];
 
 export const ascSortedCourses = [
     { name: "Courses in France", prices: [null, null] },
+    { name: "Courses in Wonderland", prices: [0, 50] },
     { name: "Courses in England", prices: [0, 100] },
     { name: "Courses in China", prices: [50, 250] },
     { name: "Courses in Kazakhstan", prices: [56, 324] },
@@ -55,5 +59,6 @@ export const descSortedCourses = [
   { name: 'Courses in Kazakhstan', prices: [ 56, 324 ] },
   { name: 'Courses in China', prices: [ 50, 250 ] },
   { name: 'Courses in England', prices: [ 0, 100 ] },
+  { name: "Courses in Wonderland", prices: [0, 50] },
   { name: 'Courses in France', prices: [ null, null ] }
 ];
